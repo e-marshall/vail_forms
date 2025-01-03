@@ -45,7 +45,7 @@ jsonschema-specifications==2024.10.1  # Confirm this version
 jupyter==1.0.0
 jupyter-console==6.4.3
 jupyter-events==0.6.3
-jupyter-lsp==3.9.0
+jupyter-lsp==2.2.5
 jupyter_client==7.6.0
 jupyter_core==5.3.0
 jupyter_server==2.3.0
