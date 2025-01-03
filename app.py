@@ -184,7 +184,7 @@ def main():
     st.plotly_chart(fig, use_container_width=True)
 
     st.subheader('Vail Resorts EBITDA')
-    st.markdown('EBITDA: Earnings before interest, taxes, depreciation and amortization. \n [EBITDA](https://www.investopedia.com/terms/e/ebitda.asp) is a measure of profitability')
+    st.markdown('EBITDA = Earnings before interest, taxes, depreciation and amortization. \n [EBITDA](https://www.investopedia.com/terms/e/ebitda.asp) is a measure of profitability')
     st.markdown('Vail resorts has been pretty profitable recently ;)')
     fig = generate_ebitda_plot()
     st.plotly_chart(fig, use_container_width=True)
