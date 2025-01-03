@@ -41,7 +41,7 @@ jedi==0.18.2  # Confirm the version needed
 Jinja2==3.1.2
 json5==0.9.6
 jsonschema==4.17.3
-jsonschema-specifications==2023.1.1  # Confirm this version
+jsonschema-specifications==2024.10.1  # Confirm this version
 jupyter==1.0.0
 jupyter-console==6.4.3
 jupyter-events==0.6.3
