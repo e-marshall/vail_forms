@@ -177,7 +177,7 @@ def main():
     #st.markdown
     st.info('NOTE: this is in progress still, not finished yet')
 
-    st.subheader('Vail Resorts Revenue (Total) and itemized')
+    st.subheader('Vail Resorts Revenue (Total) and by category')
     st.markdown("Revenues have increased rapidly since 2020, with operations in the 'Lift' line item driving much of the revenue growth.")
 
     fig = generate_revenue_plot()
