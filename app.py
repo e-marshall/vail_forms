@@ -169,8 +169,9 @@ def generate_patrol_multiples_plot():
     return fig
 
 def main():
-    st.title('Vail Resorts Revenue, Stockbuybacks and Executive Compensation')
-    st.markdown('This app looks at Vail Resorts earnings and expenditures based on SEC filings (Annual 10-K forms and annual meeting statements)')
+    st.title('Vail Resorts Earnings and Expenditures')
+    st.subheader("How much money is Vail making? How much are they spending on stock buybacks and executive compensation? Food for thought after Vail refused to bargain in good faith with Park City Ski Patrollers for months?")
+    st.markdown('This app looks at Vail Resorts earnings and expenditures based on SEC filings (Annual 10-K forms and annual meeting statements).')
 
     #st.subheader('Context')
     #st.markdown
