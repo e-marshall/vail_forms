@@ -65,7 +65,7 @@ def generate_revenue_plot():
         color='Item',  # Updated to match your DataFrame column name
         markers=True,
         title="Vail Resorts Revenue (Total) and itemized",
-        labels={"year": "Year", "amount": "Amount", "Item": "Item"}  # Updated label
+        labels={"year": "Year", "amount": "Amount ($)", "Item": "Item"}  # Updated label
     )
     return fig
 
@@ -79,7 +79,7 @@ def generate_stock_buyback_plot():
         #color='Item',  # Updated to match your DataFrame column name
         markers=True,
         title="Vail Resorts Stock Buybacks",
-        labels={"year": "Year", "amount": "Amount", "Item": "Item"}  # Updated label
+        labels={"year": "Year", "amount": "Amount ($)", "Item": "Item"}  # Updated label
     )
     return fig
 
@@ -93,7 +93,7 @@ def generate_ebitda_plot():
         color='Item',  # Updated to match your DataFrame column name
         markers=True,
         title="Vail Resorts EBITDA",
-        labels={"year": "Year", "amount": "Amount", "Item": "Item"}  # Updated label
+        labels={"year": "Year", "amount": "Amount ($)", "Item": "Item"}  # Updated label
     )
     return fig
 
@@ -107,7 +107,7 @@ def generate_total_exec_compensation_plot():
         #color='Name',  # Updated to match your DataFrame column name
         markers=True,
         title="Vail Executive Compensation",
-        #labels={"year": "Year", "amount": "Amount", "Item": "Item"}  # Updated label
+        labels={"Fiscal Year": "Year", "Total": "Amount ($)", "Item": "Item"}  # Updated label
     )
     return fig
 
@@ -163,15 +163,18 @@ def generate_patrol_multiples_plot():
     # Change the y-axis range to start at 0
     fig.update_layout(
         yaxis=dict(
-            range=[0, None]  # Start the y-axis at 0, and let the upper bound auto-adjust
+            range=[0, None],  # Start the y-axis at 0, and let the upper bound auto-adjust
+            title= 'Equivalent # of base ski patrol annual compensation amounts'
                 )
          )
     return fig
 
 def main():
     st.title('Vail Resorts Earnings and Expenditures')
-    st.subheader("How much money is Vail making? How much are they spending on stock buybacks and executive compensation? Food for thought after Vail refused to bargain in good faith with Park City Ski Patrollers for months?")
+    st.subheader("How much money is Vail making? How much are they spending on stock buybacks and executive compensation?')
+    st.markdown('Food for thought after Vail refused to bargain in good faith with Park City Ski Patrollers for months.")
     st.markdown('This app looks at Vail Resorts earnings and expenditures based on SEC filings (Annual 10-K forms and annual meeting statements).')
+    st.markdown('Code is available [here](https://github.com/e-marshall/vail_forms)')
 
     #st.subheader('Context')
     #st.markdown
@@ -185,15 +188,16 @@ def main():
 
     st.subheader('Vail Resorts EBITDA')
     st.markdown('EBITDA = Earnings before interest, taxes, depreciation and amortization. \n [EBITDA](https://www.investopedia.com/terms/e/ebitda.asp) is a measure of profitability')
-    st.markdown('Vail resorts has been pretty profitable recently ;)')
+    st.markdown('Vail resorts has been pretty profitable recently...')
     fig = generate_ebitda_plot()
     st.plotly_chart(fig, use_container_width=True)
 
     st.subheader('Vail Resorts Stock Buybacks')
     st.markdown('How much is being spent on stock buybacks? Just a cool $725 million since 2020.')
+    st.markdown('[Here](https://cwa-union.org/stock-buybacks-hurt-workers) is more info on stock buybacks and how they impact workers.')
     fig = generate_stock_buyback_plot()
     st.plotly_chart(fig, use_container_width=True)
-
+    #https://perfectunion.us/stock-buybacks-good-for-warren-buffett-bad-for-working-people/
     st.subheader('Vail Executive Compensation')
     st.markdown('This is total spent on compensation for all executives each year')
     st.markdown('There are 5 and 7 executives a year. In 2014 they made a combined 6.8 million. In 2022 it peaked at 24 million')
