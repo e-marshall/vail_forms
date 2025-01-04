@@ -321,7 +321,7 @@ def main():
 
     st.subheader('How does CEO compensation compare to ski patrol compensation?')
     st.markdown('To make this plot, I used to starting hourly wage for a ski patroller under the previous contract and the starting wage that they are requesting in the current negotiations. I calculated the annual compensation someone would make at that wage working 50 weeks a year in order to compare it to the annual CEO compensation.')
-    st.markdown('Most ski patrollers work seasonally, this is not meant to be an accurate representation of their annual compensation from Vail Resorts; it is intended to compare the previous and requested wages (which Vail has refused to agree to) to CEO compensation.')
+    st.markdown('Most ski patrollers work seasonally, this is not meant to be an accurate representation of their annual compensation from Vail Resorts; it is intended to compare the previous and requested wages to CEO compensation.')
     st.info("If you're on mobile, this figure might not render well. ")
     fig = generate_patrol_base_bubble_plot()
     st.plotly_chart(fig, use_container_width=True)
