@@ -301,7 +301,7 @@ def main():
     st.divider()
     st.header("How much money is Vail making?")
     st.subheader("Food for thought amidst the ongoing work stoppage of Park City Professional Ski Patrol Association over a failure to reach a new contract with Vail Resorts.")
-    st.markdown('This app looks at Vail Resorts earnings and expenditures based on data disclosed in 10-K and annual meeting statements. All data used is publicly available through the [SEC EDGAR database](https://www.sec.gov/search-filings).')
+    st.markdown('This app looks at Vail Resorts earnings and expenditures based on data disclosed in 10-K and annual meeting statements (Proxy Statements Pursuant to Section 14(a) ofthe Securities Exchange Act of 1934 ). All data is publicly available through the [SEC EDGAR database](https://www.sec.gov/search-filings).')
 
     st.divider()
 
@@ -316,8 +316,7 @@ def main():
     #st.info('')
 
     st.subheader('Revenue and expenses: total and by category')
-    st.markdown("Revenues have increased since dipping 2020-21, with operations in the 'Lift' line item driving much of the revenue growth.")
-    st.markdown('Vail Resorts has increased its investment in labor and labor-related expenses in recent years.')
+    st.markdown("Revenues have increased since dipping 2020-21, with operations in the 'Lift' line item driving much of the revenue growth.Vail Resorts has increased its investment in labor and labor-related expenses in recent years.")
 
     fig = generate_combined_plot()
     st.plotly_chart(fig, use_container_width=True)
@@ -342,21 +341,22 @@ def main():
 
     st.subheader('Vail Executive Compensation')
     st.markdown('This is the total amount spent on compensation for all executives each year.')
-    st.markdown('Depending on the year, there are between 5 and 7 executives in this category. In 2014, they made a combined 6.8 million. In 2022, total executive compensation peaked at 24 million.')
+    st.markdown('Depending on the year, there are between 5 and 7 executives in this category. In 2014, their compensation was a combined 6.8 million. In 2022, total executive compensation peaked at 24 million.')
     fig = generate_total_exec_compensation_plot()
     st.plotly_chart(fig, use_container_width=True)
 
     st.subheader('How does CEO compensation compare to ski patrol compensation?')
-    st.markdown('To make this plot, I used to starting hourly wage for a ski patroller under the previous contract and the starting wage that they are requesting in the current negotiations. I calculated the annual compensation someone would make at that wage working 50 weeks a year in order to compare it to the annual CEO compensation.')
-    st.markdown('Most ski patrollers work seasonally, this is not meant to be an accurate representation of their annual compensation from Vail Resorts; it is intended to compare the previous and requested wages to CEO compensation.')
-    st.info("If you're on mobile, this figure might not render well. ")
+    st.markdown('To make this plot, I used to starting hourly wage for a ski patroller under the previous contract and the starting wage that they are requesting in the current negotiations. These numbers have been publicly stated in varoius news articles (such as this [one](https://www.kpcw.org/ski-resorts/2024-12-19/park-city-mountain-ski-patrol-union-files-unfair-labor-practice-complaints-against-vail)). I calculated the annual compensation someone would make at that wage working 50 weeks a year in order to compare it to the annual CEO compensation.')
+    st.markdown('Most ski patrollers work seasonally, this is not meant to be an accurate representation of their annual compensation from Vail Resorts; it is intended to compare the previous and requested wages to average CEO compensation over recent years.')
+    
+    st.info("If you're on mobile, this figure might not render well :( ")
     fig = generate_patrol_base_bubble_plot()
     st.plotly_chart(fig, use_container_width=True)
 
     
     st.divider()
     st.markdown("Disclaimer: I'm not a financial analyst etc. etc., this was done on my personal time.")
-    st.markdown('All code used in this app is available [here](https://github.com/e-marshall/vail_forms)')
+    #st.markdown('All code used in this app is available [here](https://github.com/e-marshall/vail_forms)')
 
 
 
