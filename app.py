@@ -114,6 +114,14 @@ def generate_combined_plot():
 def generate_stock_buyback_plot():
 
     buyback_df = pd.read_csv('vail_buybacks.csv')
+    buyback_df['Year'] = pd.to_datetime(buyback_df['Year'], format='%Y-%m-%d')
+    buyback_df['Year'] = buyback_df['Year']
+    # Define the cutoff year
+    cutoff_year = '2015'
+
+    # Subset the DataFrame to only keep rows past the cutoff year
+    buyback_df = buyback_df[buyback_df['Year'] > pd.to_datetime(cutoff_year, format='%Y')]
+
     fig = px.line(
         buyback_df.rename({'Value': 'Amount ($)'}, axis=1),
         x='Year',
