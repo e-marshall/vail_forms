@@ -87,7 +87,7 @@ def generate_combined_plot():
         legend=dict(
             orientation="h",
             yanchor="bottom",
-            y=-5,
+            y=-50,
             xanchor="center",
             x=0.5,
             traceorder="grouped",
