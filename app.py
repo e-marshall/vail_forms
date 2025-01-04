@@ -89,7 +89,9 @@ def generate_combined_plot():
             font=dict(size=10),
             itemwidth=30,
             tracegroupgap=20
-        )
+        ),
+            margin=dict(l=40, r=40, t=40, b=100)  # Increase bottom margin to make space for the legend
+
     )
     return fig
 def generate_stock_buyback_plot():
