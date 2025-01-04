@@ -90,7 +90,9 @@ def generate_combined_plot():
             itemwidth=30,
             tracegroupgap=20
         ),
-            margin=dict(l=10, r=10, t=100, b=500)  # Increase bottom margin to make space for the legend
+        autosize=True,
+        height=600,
+        margin=dict(l=10, r=10, t=50, b=50)  # Increase bottom margin to make space for the legend
 
     )
     return fig
