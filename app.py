@@ -289,7 +289,7 @@ def main():
     #st.info('')
 
     st.subheader('Revenue and expenses: total and by category')
-    st.markdown("Revenues have increased rapidly since 2021, with operations in the 'Lift' line item driving much of the revenue growth.")
+    st.markdown("Revenues have increased since dipping 2020-21, with operations in the 'Lift' line item driving much of the revenue growth.")
     st.markdown('Vail Resorts has increased its investment in labor and labor-related expenses in recent years.')
 
     fig = generate_combined_plot()
