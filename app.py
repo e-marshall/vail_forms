@@ -80,6 +80,10 @@ def generate_combined_plot():
 
     # Update legend items to be in two columns per group
     fig.update_layout(
+        xaxis=dict(
+            title='Year',
+            title_standoff = 10
+        )
         legend=dict(
             orientation="h",
             yanchor="bottom",
