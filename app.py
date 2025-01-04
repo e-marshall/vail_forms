@@ -82,12 +82,12 @@ def generate_combined_plot():
     fig.update_layout(
         xaxis=dict(
             title='Year',
-            title_standoff = 10,
+            title_standoff = 50,
             side='top'
         ),
         xaxis2 = dict(
             side='top',
-            title_standoff = 10,
+            title_standoff = 50,
         ),
         legend=dict(
             orientation="h",
@@ -103,7 +103,7 @@ def generate_combined_plot():
         ),
         autosize=True,
         height=600,
-        margin=dict(l=10, r=10, t=50, b=200)  # Increase bottom margin to make space for the legend
+        margin=dict(l=10, r=10, t=100, b=40)  # Increase bottom margin to make space for the legend
 
     )
     return fig
