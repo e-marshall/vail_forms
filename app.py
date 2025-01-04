@@ -118,6 +118,7 @@ def generate_ebitda_plot():
         title="Vail Resorts EBITDA",
         labels={"year": "Year", "amount": "Amount ($)", "Item": "Item"}  # Updated label
     )
+    update_fig = fig.update_layout(showlegend=False)
     return fig
 
 def generate_total_exec_compensation_plot():
@@ -192,6 +193,7 @@ def generate_patrol_base_bubble_plot():
         height=900, width = 1200,
         margin=dict(l=10, r=10, t=30, b=10),
         autosize=True,
+        #responsive=True,
         legend=dict(
         orientation="h",  # Horizontal orientation
         yanchor="bottom",  # Align the bottom of the legend to the plot
@@ -320,8 +322,9 @@ def main():
     st.subheader('How does CEO compensation compare to ski patrol compensation?')
     st.markdown('To make this plot, I used to starting hourly wage for a ski patroller under the previous contract and the starting wage that they are requesting in the current negotiations. I calculated the annual compensation someone would make at that wage working 50 weeks a year in order to compare it to the annual CEO compensation.')
     st.markdown('Most ski patrollers work seasonally, this is not meant to be an accurate representation of their annual compensation from Vail Resorts; it is intended to compare the previous and requested wages (which Vail has refused to agree to) to CEO compensation.')
+    st.info("If you're on mobile, this figure might not render well. ")
     fig = generate_patrol_base_bubble_plot()
-    st.plotly_chart(fig, use_container_width=False)
+    st.plotly_chart(fig, use_container_width=True)
 
     
     st.divider()
