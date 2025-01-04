@@ -82,12 +82,12 @@ def generate_combined_plot():
     fig.update_layout(
         xaxis=dict(
             title='Year',
-            title_standoff = 50,
+            title_standoff = 30,
             side='top'
         ),
         xaxis2 = dict(
             side='top',
-            title_standoff = 50,
+            title_standoff = 30,
         ),
         legend=dict(
             orientation="h",
@@ -106,6 +106,10 @@ def generate_combined_plot():
         margin=dict(l=10, r=10, t=300, b=40)  # Increase bottom margin to make space for the legend
 
     )
+    # Adjust subplot titles
+    fig.layout.annotations[0].update(y=1.15)  # Move the first subplot title higher
+    fig.layout.annotations[1].update(y=1.15)  # Move the second subplot title higher
+
     return fig
 def generate_stock_buyback_plot():
 
