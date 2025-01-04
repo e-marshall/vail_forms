@@ -81,7 +81,7 @@ def generate_combined_plot():
         legend=dict(
             orientation="h",
             yanchor="bottom",
-            y=-2.5,
+            y=-5,
             xanchor="center",
             x=0.5,
             traceorder="grouped",
@@ -301,7 +301,7 @@ def main():
     #st.plotly_chart(fig, use_container_width=True)
 
     st.subheader('Vail Resorts EBITDA')
-    st.markdown('Earnings before interest, taxes, depreciation and amortization (EBITDA). \n [EBITDA](https://www.investopedia.com/terms/e/ebitda.asp) is a measure of profitability')
+    st.markdown('Earnings before interest, taxes, depreciation and amortization ([EBITDA](https://www.investopedia.com/terms/e/ebitda.asp)), is a measure of profitability')
     #st.markdown('Vail Resorts has been pretty profitable recently...')
     fig = generate_ebitda_plot()
     st.plotly_chart(fig, use_container_width=True)
