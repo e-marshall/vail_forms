@@ -79,15 +79,15 @@ def generate_combined_plot():
     )
 
     # Update legend items to be in two columns per group
-    fig.update_layout(
-        xaxis=dict(side='top',
-            title=dict(text='Year',standoff = 30,
-                      ),        
-                       ),
-        xaxis2 = dict(side='top',
-            title=dict(text='Year',standoff = 30,
-                      )
-                       ),)
+    #fig.update_layout(
+        #xaxis=dict(side='top',
+            #title=dict(text='Year',standoff = 30,
+            #          ),        
+            #           ),
+        #xaxis2 = dict(side='top',
+        #    title=dict(text='Year',standoff = 30,
+        #              )
+        #               ),)
     fig.update_layout(
         legend=dict(
             orientation="h",
