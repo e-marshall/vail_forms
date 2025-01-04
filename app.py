@@ -14,6 +14,7 @@ from scrape import SECScraper
 def generate_revenue_plot():
 
     revenue_df = pd.read_csv('vail_revenue.csv')
+    revenue_df = revenue_df.replace('Total Mountain net revenue','Total')
     fig = px.line(
         revenue_df,
         x='year',
@@ -29,6 +30,7 @@ def generate_revenue_plot():
 
 def generate_expenses_plot():
     expenses_df = pd.read_csv('vail_expenses.csv')
+    expenses_df = expenses_df.replace('Total Mountain operating expense','Total')
     fig = px.line(
         expenses_df,
         x='year',
