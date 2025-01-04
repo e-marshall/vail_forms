@@ -82,7 +82,7 @@ def generate_combined_plot():
     fig.update_layout(
         xaxis=dict(
             title='Year',
-            title_standoff = 10
+            title_standoff = 5
         ),
         legend=dict(
             orientation="h",
