@@ -304,7 +304,7 @@ def main():
     st.divider()
     #st.subheader('Context')
     #st.markdown
-    st.info('NOTE: this is in progress still, not finished yet')
+    #st.info('NOTE: this is in progress still, not finished yet')
     #st.info('')
 
     st.subheader('Revenue and expenses: total and by category')
