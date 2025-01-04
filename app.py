@@ -6,53 +6,7 @@ import plotly.graph_objects as go
 from organize_tables import RevExp, BuyBacks, EBITDA, ExecComp, ScrapeDict
 from scrape import SECScraper
 
-#make data 
-target_url = 'https://data.sec.gov/submissions/CIK0000812011.json'
-cutoff_date = "2014-01-01"
-form_type_10k = '10-K'
 
-scraper = SECScraper(target_url)
-soup_dict_10k = ScrapeDict(scraper, target_url, cutoff_date, form_type_10k)
-
-#mtn revenue + expenses
-revenue_table_identifier = 'Mountain net revenue'
-rev_exp_obj = RevExp(soup_dict_10k, revenue_table_identifier, 0)
-revenue_df = rev_exp_obj.rev_df
-revenue_df.to_csv('vail_revenue.csv')
-expenses_df = rev_exp_obj.exp_df
-expenses_df.to_csv('vail_expenses.csv')
-
-#stock buybacks
-buyback_table_identifier = "Repurchases of common stock"
-buybacks_obj = BuyBacks(soup_dict_10k, buyback_table_identifier, 1)
-
-buyback_df = buybacks_obj.buyback_df
-buyback_df.to_csv('vail_buybacks.csv')
-
-# executive compensation
-target_url = 'https://data.sec.gov/submissions/CIK0000812011.json'
-cutoff_date = "2014-01-01"
-proxy_form_type = "DEF 14A"
-
-discretionary_spending_identifier = 'Company-paid Lodging, Ski School Privileges and Discretionary Spending on Goods and Services'
-#discretionary flag doesn't find any tables for some reason
-
-base_salary_identifier1 = "Name and Principal Position"
-base_salary_identifier = "Non-Equity Incentive Plan Compensation"
-
-proxy_scraper = SECScraper(target_url)
-proxy_soup_dict_b = proxy_scraper.run('2014-01-01', 'DEF 14A')
-exec_compensation = ExecComp(proxy_soup_dict_b, base_salary_identifier,base_salary_identifier1)
-
-full_ec = exec_compensation.full_df
-full_ec.to_csv('vail_exec_compensation.csv')
-
-# EBITDA
-ebitda_table_identifier = 'Net income attributable to Vail Resorts, Inc.'
-
-ebitda = EBITDA(soup_dict_10k, ebitda_table_identifier, 0,1, '2022-09-28')
-ebitda_df = ebitda.full_df
-ebitda_df.to_csv('vail_ebitda.csv')
 
 
 def generate_revenue_plot():
