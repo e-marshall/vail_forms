@@ -94,7 +94,7 @@ def generate_combined_plot():
         ),
         autosize=True,
         height=600,
-        margin=dict(l=10, r=10, t=50, b=100)  # Increase bottom margin to make space for the legend
+        margin=dict(l=10, r=10, t=50, b=200)  # Increase bottom margin to make space for the legend
 
     )
     return fig
