@@ -83,7 +83,7 @@ def generate_combined_plot():
         xaxis=dict(
             title='Year',
             title_standoff = 10
-        )
+        ),
         legend=dict(
             orientation="h",
             yanchor="bottom",
