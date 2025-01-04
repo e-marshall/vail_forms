@@ -86,7 +86,7 @@ def generate_combined_plot():
             x=0.5,
             traceorder="grouped",
             title_text="",
-            font=dict(size=10),
+            font=dict(size=9),
             itemwidth=30,
             tracegroupgap=20
         ),
