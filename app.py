@@ -183,7 +183,7 @@ def generate_patrol_base_bubble_plot():
         mode='markers',
         marker=dict(size=bubble_df['Annual_starting_patrol_comp']/8000, color='Blue'),  # Adjust size for better visualization
         name='Starting_patrol_compensation (Assuming full year)',
-        text=[f"Starting_patrol_compensation (Assuming full year): ${bubble_df['Annual_starting_patrol_comp'][0]:,}"],  # Text to display on hover with formatted number
+        text=[f"Starting patrol compensation (Assuming full year): ${bubble_df['Annual_starting_patrol_comp'][0]:,}"],  # Text to display on hover with formatted number
         hoverinfo='text'  # Display only the text on hover
         
     ))
@@ -193,7 +193,7 @@ def generate_patrol_base_bubble_plot():
         mode='markers',
         marker=dict(size=bubble_df['Requested_annual_starting_patrol_comp']/8000, color='Green'),  # Adjust size for better visualization
         name='Requested starting_patrol compensation (Assuming full year)',
-        text=[f"Requested starting_patrol_compensation (Assuming full year): ${bubble_df['Requested_annual_starting_patrol_comp'][0]:,}"],  # Text to display on hover with formatted number
+        text=[f"Requested starting patrol compensation (Assuming full year): ${bubble_df['Requested_annual_starting_patrol_comp'][0]:,}"],  # Text to display on hover with formatted number
         hoverinfo='text'  # Display only the text on hover
         
     ))
