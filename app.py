@@ -308,7 +308,7 @@ def main():
     #st.header("How much are they spending on stock buybacks and executive compensation?")
     st.subheader("A little bit of background")
     st.markdown("On December 27, 2024, the [Park City Professional Ski Patrol Association went on strike](https://www.sltrib.com/news/2024/12/27/park-city-mountain-ski-patrollers/). They have been attempting to negotiate a new contract with Vail Resorts since their previous contract expired in April 2024. During this time, [multiple unfair labor practice complaints](https://www.kpcw.org/ski-resorts/2024-12-19/park-city-mountain-ski-patrol-union-files-unfair-labor-practice-complaints-against-vail) have been filed against the company with the National Labor Relations Board (NLRB), and the [company has failed to provide counter offers to the Union's proposed wages and benefits package, offering only an effective 0.5% increase](https://www.parkrecord.com/2024/12/22/ski-patrol-union-contract-negotiations-reach-agreement-on-24th-of-27-items-but-not-the-main-one-pay/).")
-    st.markdown("After seeing some numbers shared in news articles and on social media, I was curious to learn more about how much money the publicly-traded company, Vail Resorts (which owns Park City Mountain) was making and other aspects of their finances. I wanted to learn a bit more about web scraping and some other Python tools so I decided to see if I could make an app based on financial data extracted from Vail's SEC filings.")
+    st.markdown("After seeing some numbers shared in news articles and on social media, I was curious to learn more about how much money the publicly-traded company, Vail Resorts (which owns Park City Mountain), was making and other aspects of their finances. I wanted to learn a bit more about web scraping and some other Python tools so I decided to see if I could make an app based on financial data extracted from Vail's SEC filings.")
     st.divider()
     #st.subheader('Context')
     #st.markdown
@@ -316,7 +316,7 @@ def main():
     #st.info('')
 
     st.subheader('Revenue and expenses: total and by category')
-    st.markdown("Revenues have increased since dipping 2020-21, with operations in the 'Lift' line item driving much of the revenue growth.Vail Resorts has increased its investment in labor and labor-related expenses in recent years.")
+    st.markdown("Revenues have increased since dipping 2020-21, with operations in the 'Lift' line item driving much of the revenue growth. Vail Resorts has increased its investment in labor and labor-related expenses in recent years.")
 
     fig = generate_combined_plot()
     st.plotly_chart(fig, use_container_width=True)
