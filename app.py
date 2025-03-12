@@ -5,8 +5,8 @@ import numpy as np
 import plotly.graph_objects as go
 from plotly.subplots import make_subplots
 
-from organize_tables import RevExp, BuyBacks, EBITDA, ExecComp, ScrapeDict
-from scrape import SECScraper
+from scripts.organize_tables import RevExp, BuyBacks, EBITDA, ExecComp, ScrapeDict
+from scripts.scrape import SECScraper
 
 
 
