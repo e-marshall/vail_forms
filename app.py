@@ -13,7 +13,7 @@ from scrape import SECScraper
 
 def generate_revenue_plot():
 
-    revenue_df = pd.read_csv('vail_revenue.csv')
+    revenue_df = pd.read_csv('tables/vail_revenue.csv')
     revenue_df = revenue_df.replace('Total Mountain net revenue','Total')
     fig = px.line(
         revenue_df,
@@ -29,7 +29,7 @@ def generate_revenue_plot():
     return fig
 
 def generate_expenses_plot():
-    expenses_df = pd.read_csv('vail_expenses.csv')
+    expenses_df = pd.read_csv('tables/vail_expenses.csv')
     expenses_df = expenses_df.replace('Total Mountain operating expense','Total')
     fig = px.line(
         expenses_df,
@@ -113,7 +113,7 @@ def generate_combined_plot():
     return fig
 def generate_stock_buyback_plot():
 
-    buyback_df = pd.read_csv('vail_buybacks.csv')
+    buyback_df = pd.read_csv('tables/vail_buybacks.csv')
     buyback_df['Year'] = pd.to_datetime(buyback_df['Year'], format='%Y-%m-%d')
     buyback_df['Year'] = buyback_df['Year']
     # Define the cutoff year
@@ -135,7 +135,7 @@ def generate_stock_buyback_plot():
 
 def generate_ebitda_plot():
 
-    ebitda_df = pd.read_csv('vail_ebitda.csv')
+    ebitda_df = pd.read_csv('tables/vail_ebitda.csv')
     fig = px.line(
         ebitda_df.rename({'Amount':'Amount ($)'}, axis=1),
         x='Year',
@@ -150,7 +150,7 @@ def generate_ebitda_plot():
 
 def generate_total_exec_compensation_plot():
 
-    full_ec = pd.read_csv('vail_exec_compensation.csv')
+    full_ec = pd.read_csv('tables/vail_exec_compensation.csv')
     fig = px.line(
         full_ec.groupby(['Fiscal Year'])['Total'].sum().reset_index(),
         x='Fiscal Year',
@@ -164,7 +164,7 @@ def generate_total_exec_compensation_plot():
 
 def generate_patrol_base_bubble_plot():
 
-    exec_comp = pd.read_csv('vail_exec_compensation.csv')
+    exec_comp = pd.read_csv('tables/vail_exec_compensation.csv')
 
     full_ec = exec_comp
     patrol_base_wage = 21
@@ -238,7 +238,7 @@ def generate_patrol_base_bubble_plot():
 
 def generate_patrol_multiples_plot():
 
-    exec_comp = pd.read_csv('vail_exec_compensation.csv')
+    exec_comp = pd.read_csv('tables/vail_exec_compensation.csv')
 
     full_ec = exec_comp
     total_ec = full_ec.groupby(['Fiscal Year'])['Total'].sum().reset_index()
