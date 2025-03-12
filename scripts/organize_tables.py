@@ -3,7 +3,7 @@ import numpy as np
 from typing import Dict, Optional, List
 import logging
 import re
-from scrape import SECScraper
+from scripts.scrape import SECScraper
 import pandera as pa
 from pandera.typing import DataFrame,Series
 from pandera import DataFrameSchema
