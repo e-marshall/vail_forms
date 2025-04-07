@@ -327,7 +327,7 @@ def main():
     #st.plotly_chart(fig, use_container_width=True)
 
     st.subheader('Vail Resorts EBITDA')
-    st.markdown('Earnings before interest, taxes, depreciation and amortization ([EBITDA](https://www.investopedia.com/terms/e/ebitda.asp)), is a measure of profitability')
+    st.markdown('Earnings before interest, taxes, depreciation and amortization ([EBITDA](https://www.investopedia.com/terms/e/ebitda.asp)), is a measure of profitability.')
     #st.markdown('Vail Resorts has been pretty profitable recently...')
     fig = generate_ebitda_plot()
     st.plotly_chart(fig, use_container_width=True)
@@ -346,7 +346,7 @@ def main():
     st.plotly_chart(fig, use_container_width=True)
 
     st.subheader('How does CEO compensation compare to ski patrol compensation?')
-    st.markdown('To make this plot, I used to starting hourly wage for a ski patroller under the previous contract and the starting wage that they are requesting in the current negotiations. These numbers have been publicly stated in varoius news articles (such as this [one](https://www.kpcw.org/ski-resorts/2024-12-19/park-city-mountain-ski-patrol-union-files-unfair-labor-practice-complaints-against-vail)). I calculated the annual compensation someone would make at that wage working 50 weeks a year in order to compare it to the annual CEO compensation.')
+    st.markdown('To make this plot, I used to starting hourly wage for a ski patroller under the previous contract and the starting wage that they are requesting in the current negotiations. These numbers have been publicly stated in various news articles (such as this [one](https://www.kpcw.org/ski-resorts/2024-12-19/park-city-mountain-ski-patrol-union-files-unfair-labor-practice-complaints-against-vail)). I calculated the annual compensation someone would make at that wage working 50 weeks a year in order to compare it to the annual CEO compensation.')
     st.markdown('Most ski patrollers work seasonally, this is not meant to be an accurate representation of their annual compensation from Vail Resorts; it is intended to compare the previous and requested wages to average CEO compensation over recent years.')
     
     st.info("If you're on mobile, this figure might not render well :( ")
